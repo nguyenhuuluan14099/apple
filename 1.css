@@ -1,0 +1,172 @@
+*{margin: 0; padding: 0;}
+
+.motslide {
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+.motslide .tamgiacnau1,
+.motslide .tamgiacnau2,
+.motslide .tamgiactren,
+.motslide .textnoidung{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+
+.motslide .tamgiacnau1{
+    opacity: 0;
+    top: -18%;
+}
+.motslide .tamgiacnau2{
+    opacity: 0.3;
+    top: 15%;
+}
+.motslide .tamgiactren{
+    opacity: 0.3;
+    right: -51px;
+}
+.motslide .textnoidung{
+    opacity: 1;
+    width: 197px;
+    top: 44%;
+    left: 6%;
+    color: white;
+}
+
+.textnoidung h2{
+    font-size: 48px;
+    font-weight: bold;
+}
+.textnoidung p{
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.textnoidung .thanhngang{
+    width: 100px;
+    height: 1px;
+    border: 1px solid white;
+    background-color: white;
+    margin-top: -12px;
+}
+.textnoidung .text{
+    font-family: segoe ui light;
+    text-transform: inherit;
+}
+.textnoidung a{
+    border: 1px solid white;
+    padding: 4px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+.motslide .img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.fullscreen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fullscreen ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.pageswapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.fullscreen ul li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+.fullscreen ul li.active{
+    opacity: 1;
+}
+.fullscreen ul li.active .motslide .tamgiacnau1{
+    transition: 0.4s;
+    animation: move1 1s forwards;
+}
+@keyframes move1{
+    from{transform: translateX(-100%);opacity: 0;}
+    to{transform: translateX(0%);opacity: 0.5;}
+}
+.fullscreen ul li.active .motslide .tamgiacnau2{
+    transition: 0.4s;
+    animation: move2 1.5s forwards;
+}
+@keyframes move2{
+    from{transform: translateX(-100%);opacity: 0;}
+    to{transform: translateX(0%);opacity: 0.3;}
+}
+.fullscreen ul li.active .motslide .tamgiactren{
+    transition: 0.4s;
+    animation: move3 1.5s forwards;
+}
+@keyframes move3{
+    from{transform: translateX(100%);opacity: 0;}
+    to{transform: translateX(0%);opacity: 0.3;}
+}
+.fullscreen ul li.active .motslide .textnoidung{
+    transition: 0.4s;
+    animation: move4 2s forwards;
+}
+/* .fullscreen ul li.active .motslide .textnoidung h2{
+    transition: 0.4s;
+    animation: move4 0.5s forwards 2s;
+   
+} */
+
+@keyframes move4{
+    from{transform: translateX(-100%);opacity: 0;}
+    to{transform: translateX(0%);opacity: 1;}
+}
+
+
+html,body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+._3nut ul {
+    display: inline;
+}
+
+._3nut {
+    text-align: center;
+    position: absolute;
+    z-index: 9;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+._3nut ul li {display: inline-block;width: 20px;
+    height: 20px;/* border: 1px solid black; */border-radius: 50%;text-indent: -9999px;background-color: #8080807a;cursor: pointer;margin: 1px;}
+
+/* ._3nut ul li:hover {
+    background-color: rgba(0, 0, 0, 0.959);
+    border: 1px solid rgb(241, 16, 16);
+}  */
+._3nut ul li.active{
+    background-color: rgb(243, 12, 12);
+    transition: 0.4s;
+    border: 2px solid rgb(22, 22, 3);
+}
